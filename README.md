@@ -38,7 +38,8 @@ and then creates the distributable box file.
 
 # Learn how to easily set up devstack
 
-Browse ***TODO*** this repository to learn what these scripts do.
+* [install.sh](install.sh) - commands used during provisioning 
+* [files/](files/) - configuration files copied into the vm
 
 License
 -------
