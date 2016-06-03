@@ -16,7 +16,7 @@ Usage
 You can either use vagrant to set up the environment, roll your own VirtualBox
 image or just follow the installation script to manually set up devstack.
 
-# Using Vagrant
+### Using Vagrant
 
 This method actually sets up everything including devstack. It takes a fair
 amount of time (more than 30 minutes based on the internet connection)
@@ -28,7 +28,7 @@ amount of time (more than 30 minutes based on the internet connection)
 5. `vagrant up`
 6. `vagrant reload`
 
-# Roll your own image
+### Roll your own image
 
 Essentially the same procedure, with exporting an ova archive at the end which
 then can be distributed and easily import into VirtualBox
@@ -36,7 +36,7 @@ then can be distributed and easily import into VirtualBox
 `./create-training-box.sh` is a handy tool that sets up everythong with vagrant
 and then creates the distributable box file.
 
-# Learn how to easily set up devstack
+### Learn how to easily set up devstack
 
 * [install.sh](install.sh) - commands used during provisioning 
 * [files/](files/) - configuration files copied into the vm
