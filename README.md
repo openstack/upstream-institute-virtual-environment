@@ -23,7 +23,7 @@ amount of time (more than 30 minutes based on the internet connection)
 
 1. Set up VirtualBox
 2. Set up Vagrant
-3. `git clone **TODO**`
+3. `git clone https://github.com/kmARC/openstack-training-virtual-environment`
 4. `cd openstack-upstream-training`
 5. `vagrant up`
 6. `vagrant reload`
