@@ -6,7 +6,11 @@ Vagrant.configure(2) do |config|
         vb.cpus = 2
         vb.name = "devstack-training"
     end
-    config.vm.provision "file", source: "files/home", destination: "/"
-    # config.vm.provision "shell", path: "install.sh"
-    config.ssh.forward_x11 = true
+    config.vm.provision :file, source: "files/home", destination: "/"
+    config.vm.provision :shell, path: "install-base.sh", privileged: false,
+        keep_color: true
+    config.vm.provision :shell, path: "install-devstack.sh", privileged: false,
+        keep_color: true
+    config.vm.box_check_update = false
+    # config.ssh.forward_x11 = true
 end
