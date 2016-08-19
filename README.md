@@ -7,9 +7,14 @@ able to start hacking on OpenStack.
 
 Screenshots
 -----------
-![Devstack running](docs/01.png)
-![Geany with keystone code loaded](docs/02.png)
-![git and XChat](docs/03.png)
+Devstack running
+![Devstack running](docs/01.png "Devstack running")
+
+Geany with keystone code loaded
+![Geany with keystone code loaded](docs/02.png "Geany with keystone code loaded")
+
+git and XChat
+![git and XChat](docs/03.png "git and XChat")
 
 Building the Virtual Machine
 ----------------------------
