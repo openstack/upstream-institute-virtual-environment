@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # TODO: select local server for updates
+APT_MIRROR=http://mirror.switch.ch/ftp/mirror
+
 
 export DEBIAN_FRONTEND=noninteractive
+sudo sed -i "s@http://archive.ubuntu.com@$APT_MIRROR@g" /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get dist-upgrade -y
 
@@ -24,6 +27,9 @@ sudo apt-get install -y htop mc tmux
 sudo apt-get install -y git gitk git-gui git-review tig
 
 sudo apt-get clean
+
+# Enable shared folder access
+sudo adduser vagrant vboxsf
 
 # Enable autologin
 sudo cp -ar /vagrant/files/etc /

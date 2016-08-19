@@ -3,15 +3,16 @@ OpenStack upstream training virtual environment
 
 This repository contains a Vagrant-based devstack setup. It installs the
 necessary components in an Ubuntu machine along with basic GUI features to be
-able to start hacking on OpenStack!
+able to start hacking on OpenStack.
 
-The output
-----------
+Screenshots
+-----------
+![Devstack running](docs/01.png)
+![Geany with keystone code loaded](docs/02.png)
+![git and XChat](docs/03.png)
 
-!!! TODO !!!
-
-Usage
------
+Building the Virtual Machine
+----------------------------
 
 You can either use vagrant to set up the environment, roll your own VirtualBox
 image or just follow the installation script to manually set up devstack.
@@ -38,7 +39,8 @@ and then creates the distributable box file.
 
 ### Learn how to easily set up devstack
 
-* [install.sh](install.sh) - commands used during provisioning 
+* [install-base.sh](install-base.sh) and 
+  [install-devstack.sh](install-devstack.sh) - commands used during provisioning
 * [files/](files/) - configuration files copied into the vm
 
 License
