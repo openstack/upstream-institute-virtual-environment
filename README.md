@@ -5,8 +5,28 @@ This repository contains a Vagrant-based devstack setup. It installs the
 necessary components in an Ubuntu machine along with basic GUI features to be
 able to start hacking on OpenStack.
 
+Usage
+-----
+
+There is a prebuilt appliance, ready to use. [Download it from here](
+https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova).
+
+1. Set up VirtualBox
+2. Import the `ova` file (`File` -> `Import appliance...`)
+3. Start up the VM
+4. Open a terminal and start devstack
+
+        cd /opt/devstack
+        ./stack.sh
+
+    This step takes about 10-15 minutes, it needs an internet connection,
+    however the expected downloaded data stays low if using  a fresh enough
+    appliance.
+
+
 Screenshots
 -----------
+
 Devstack running
 ![Devstack running](docs/01.png "Devstack running")
 
@@ -15,6 +35,7 @@ Geany with keystone code loaded
 
 git and XChat
 ![git and XChat](docs/03.png "git and XChat")
+
 
 Building the Virtual Machine
 ----------------------------
