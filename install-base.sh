@@ -31,5 +31,6 @@ sudo apt-get clean
 # Enable shared folder access
 sudo adduser vagrant vboxsf
 
-# Enable autologin
+# Copy global configs (/etc)
+# (autologin, swap creation and deletion, etc.)
 sudo cp -ar /vagrant/files/etc /

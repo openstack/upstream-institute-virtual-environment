@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+swapoff -a
+rm -rf /home/vagrant/swap.img
