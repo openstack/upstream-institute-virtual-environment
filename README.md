@@ -1,5 +1,7 @@
-OpenStack upstream training virtual environment
+OpenStack upstream training virtual environment 
 ===============================================
+[bit.ly/openstack-training-vm]()
+==============================
 
 Introduction
 ------------
