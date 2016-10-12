@@ -1,8 +1,8 @@
 OpenStack Training Virtual Environment
 ======================================
 
-[bit.ly/training-vm]()
-----------------------
+[bit.ly/training-vm](http://bit.ly/training-vm)
+-----------------------------------------------
 
 Introduction
 ------------
