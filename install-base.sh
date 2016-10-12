@@ -2,8 +2,10 @@
 # TODO: select local server for updates
 APT_MIRROR=http://mirror.switch.ch/ftp/mirror
 
-
 export DEBIAN_FRONTEND=noninteractive
+
+REPO=$(dirname "$(readlink -f "$0")")/
+
 sudo sed -i "s@http://archive.ubuntu.com@$APT_MIRROR@g" /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get dist-upgrade -y
@@ -14,23 +16,15 @@ sudo /usr/share/debconf/fix_db.pl
 sudo dpkg-reconfigure dictionaries-common
 sudo apt-get dist-upgrade -y
 
-# Set up a desktop environment
-sudo apt-get install -y xfce4
-sudo apt-get install -y lightdm lightdm-gtk-greeter \
-    --no-install-recommends --no-install-suggests
-# Install basic GUI applications
-sudo apt-get install -y firefox xfce4-terminal xfce4-whiskermenu-plugin \
-    vim-gtk geany xchat
-# Install basic TUI applications
-sudo apt-get install -y htop mc tmux
 # Install git workflow related software
 sudo apt-get install -y git gitk git-gui git-review tig
 
+# Install basic TUI applications
+sudo apt-get install -y htop mc tmux
+
 sudo apt-get clean
 
-# Enable shared folder access
-sudo adduser vagrant vboxsf
-
-# Copy global configs (/etc)
-# (autologin, swap creation and deletion, etc.)
-sudo cp -ar /vagrant/files/etc /
+# Copy configs
+sudo cp -ar "$REPO/files/etc" /
+sudo cp -ar "$REPO/files/home" /
+sudo chown -R "$USER:$GROUP" /home/

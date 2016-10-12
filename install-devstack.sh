@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
+REPO=$(dirname "$(readlink -f "$0")")/
+
 # Install devstack
-DIR_DEVSTACK=/opt/devstack
-sudo mkdir $DIR_DEVSTACK
-sudo git clone https://git.openstack.org/openstack-dev/devstack $DIR_DEVSTACK
-sudo cp -ar /vagrant/files/opt /
-sudo chown -R vagrant:vagrant $DIR_DEVSTACK
-sudo chown -R vagrant:vagrant /opt/stack
-$DIR_DEVSTACK/stack.sh
+sudo mkdir /opt/devstack
+sudo chown -R "$USER:$GROUP" /opt/devstack
+
+git clone https://git.openstack.org/openstack-dev/devstack /opt/devstack
+cp -ar "$REPO/files/opt" /
+
+# sudo chown -R "$USER:$GROUP" /opt/devstack
+# sudo chown -R "$USER:$GROUP" /opt/stack
+
+/opt/devstack/stack.sh
 
 sudo apt-get clean
