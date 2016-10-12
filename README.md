@@ -23,7 +23,7 @@ right place.
 | A prebuilt image                        | I want to build myself             |
 | ----------------                        | ----------------------             |
 | Takes 15 minutes                        | Takes 45-60 minutes                |
-| [Instructions][#using-a-prebuilt-image] | [Instructions][#building-your-own] |
+| [Instructions](#using-a-prebuilt-image) | [Instructions](#building-your-own) |
 | [Download image][image]                 |                                    |
 
 [image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
