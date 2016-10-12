@@ -18,8 +18,9 @@ right place.
 ### What do I need?
 
 * 6GB of _free_ RAM (so at least 8GB in your laptop)
-* [VirtualBox](https://www.virtualbox.org/)
 * Recent CPU with at least 4 cores
+* 10GB disk space
+* [VirtualBox](https://www.virtualbox.org/)
 
 ### What do I want?
 
@@ -27,7 +28,7 @@ right place.
 | ----------------                        | ----------------------             |
 | Takes 15 minutes                        | Takes 45-60 minutes                |
 | [Instructions](#using-a-prebuilt-image) | [Instructions](#building-your-own) |
-| [Download image][image]                 |                                    |
+| [Download image][image] (2GB)           |                                    |
 
 [image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
 
