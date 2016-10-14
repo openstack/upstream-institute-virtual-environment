@@ -17,6 +17,6 @@ Vagrant.configure(2) do |config|
     config.vm.provision :shell, inline: "/vagrant/configure-vagrant.sh",
         privileged: false, keep_color: true
     config.vm.box_check_update = false
-    # config.vm.network :private_network, ip: "192.168.50.4"
+    config.vm.network :private_network, ip: "192.168.50.4"
     config.ssh.forward_x11 = true
 end
