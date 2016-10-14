@@ -9,9 +9,9 @@ sudo chown -R "$USER:$GROUP" /opt/devstack
 git clone https://git.openstack.org/openstack-dev/devstack /opt/devstack
 cp -ar "$REPO/files/opt" /
 
-# sudo chown -R "$USER:$GROUP" /opt/devstack
-# sudo chown -R "$USER:$GROUP" /opt/stack
-
 /opt/devstack/stack.sh
 
 sudo apt-get clean
+
+# Enable OFFLINE mode for next invoking stack.sh to be faster
+sed -i 's/#OFFLINE=/OFFLINE=/' /opt/devstack/local.conf
