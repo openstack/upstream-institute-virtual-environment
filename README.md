@@ -88,6 +88,9 @@ Geany with keystone code loaded
 git and XChat
 ![git and XChat](docs/03.png "git and XChat")
 
+Getting around in the VM
+------------------------
+
 License
 -------
 MIT
