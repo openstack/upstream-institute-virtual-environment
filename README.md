@@ -91,6 +91,41 @@ git and XChat
 Getting around in the VM
 ------------------------
 
+After booting up the virtual machine, start setting up devstack. It takes around
+10 minutes to finish, until then you can get familiar with the environment the
+VM provides you with.
+
+Open up a terminal and run `/opt/devstack/stack.sh`
+
+The four main software you will be using from the desktop during the training
+are
+* a browser (Firefox)
+* a terminal emulator
+* a text editor (Geany, vim)
+* an IRC client (XChat)
+
+The browser already contains a couple of handy bookmarks on the bookmark bar.
+This document can be reached via the *VM Help* bookmark. When `stack.sh`
+finished running, you can open the OpenStack Horizon Dashboard using the
+*DevStack* bookmark.
+
+DevStack install OpenStack software to `/opt/stack`. You can edit these files
+using you preferred editor of choice. You can install any software from the
+Ubuntu repoistories using the default `vagrant` user (no password needed for
+sudo).
+
+To log in to IRC, XChat is set up for you. Please make sure that you replace the
+default user `vagrant` upon first start before logging in to Freenode channels.
+
+The installed OpenStack cloud is capable of running virtual machines. However,
+please keep in mind, due to the significant memory requirements of running a VM
+your environment may not be capable to perform this task. Also note that the
+default security groups are not modified, so if you want to ping or SSH into
+your VM, you need to add the correct security rules (ICMP In/Egress from all,
+SSH ingress from all). Also beware that sometimes Horizon logs you in into the
+wrong project. To use the private networking by default, you need to log in as
+the default `demo` user (password: `admin`) and select `demo` as project.
+
 License
 -------
 MIT
