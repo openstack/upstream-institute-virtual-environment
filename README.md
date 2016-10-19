@@ -76,18 +76,6 @@ and then creates the distributable box file.
   [install-devstack.sh](install-devstack.sh) - commands used during provisioning
 * [files/](files/) - configuration files copied into the vm
 
-Screenshots
------------
-
-Devstack running
-![Devstack running](docs/01.png "Devstack running")
-
-Geany with keystone code loaded
-![Geany with keystone code loaded](docs/02.png "Geany with keystone code loaded")
-
-git and XChat
-![git and XChat](docs/03.png "git and XChat")
-
 Getting around in the VM
 ------------------------
 
@@ -125,6 +113,18 @@ your VM, you need to add the correct security rules (ICMP In/Egress from all,
 SSH ingress from all). Also beware that sometimes Horizon logs you in into the
 wrong project. To use the private networking by default, you need to log in as
 the default `demo` user (password: `admin`) and select `demo` as project.
+
+Screenshots
+-----------
+
+Devstack running
+![Devstack running](docs/01.png "Devstack running")
+
+Geany with keystone code loaded
+![Geany with keystone code loaded](docs/02.png "Geany with keystone code loaded")
+
+git and XChat
+![git and XChat](docs/03.png "git and XChat")
 
 License
 -------
