@@ -40,8 +40,17 @@ Instructions
 1. Set up VirtualBox
 2. Download the [pre-built image][image]
 3. Import the `ova` file (`File` -> `Import appliance...`)
-4. Start up the VM
-5. Open a terminal and start devstack
+4. Set up a private network:
+    - `File` -> `Preferences` -> `Network` -> `Host-only Networks`
+    - Create a new host-only network with the following settings:
+        * *IPv4 Address:* 192.168.50.1
+        * *IPv4 Network Mask:* 255.255.255.0
+        * *DHCP Server*: disabled
+    - Select the virtual machine, `Settings` -> `Network` -> `Adapter 2`
+    - Make sure that the adapter is enabled, attached to the host-only network
+        you created.
+5. Start up the VM
+6. Open a terminal and start devstack
 
         cd /opt/devstack
         ./stack.sh
