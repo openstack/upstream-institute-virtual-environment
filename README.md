@@ -47,7 +47,7 @@ Instructions
         ./stack.sh
 
     This step takes about 10-15 minutes, it needs an internet connection,
-    however the expected downloaded data stays low if using  a fresh enough
+    however the expected downloaded data stays low if using a fresh enough
     appliance.
 
 
@@ -59,15 +59,22 @@ Instructions
 4. `cd openstack-training-virtual-environment`
 5. `vagrant up`
 6. `vagrant reload`
-7. Follow [instructions for the prebuilt image](#using-a-prebuilt-image) from
-   step 4
+7. `vagrant ssh`
+8. Start devstack
+
+        cd /opt/devstack
+        ./stack.sh
+
+    This step takes about 10-15 minutes, it needs an internet connection,
+    however the expected downloaded data stays low if using a fresh enough
+    appliance.
 
 ### Roll your own image
 
 Essentially the same procedure, with exporting an ova archive at the end which
 then can be distributed and easily import into VirtualBox
 
-`./create-training-box.sh` is a handy tool that sets up everythong with vagrant
+`./create-training-box.sh` is a handy tool that sets up everything with vagrant
 and then creates the distributable box file.
 
 ### Learn how to easily set up devstack
