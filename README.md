@@ -31,7 +31,7 @@ right place.
 | [Download image][image] (2GB)           |                                    |
 
 [image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
-
+[ova-import-help]: README-virtualbox-import.md
 Instructions
 ------------
 
@@ -39,7 +39,7 @@ Instructions
 
 1. Set up VirtualBox
 2. Download the [pre-built image][image]
-3. Import the `ova` file (`File` -> `Import appliance...`)
+3. Import the `ova` file (`File` -> `Import appliance...`) (More details to import on Windows are [here][ova-import-help].)
 4. Set up a private network:
     - `File` -> `Preferences` -> `Network` -> `Host-only Networks`
     - Create a new host-only network with the following settings:
