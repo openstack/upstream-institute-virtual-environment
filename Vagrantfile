@@ -1,10 +1,10 @@
 Vagrant.configure(2) do |config|
-    config.vm.hostname = "training"
+    config.vm.hostname = "upstream-training"
     config.vm.box = "ubuntu/trusty64"
     config.vm.provider "virtualbox" do |vb|
         vb.memory = "5632"
         vb.cpus = 2
-        vb.name = "devstack-training"
+        vb.name = "upstream-training"
         vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
         vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
     end
