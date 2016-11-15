@@ -11,7 +11,7 @@ cp -ar "$REPO/files/opt" /
 
 /opt/devstack/stack.sh
 
-sudo apt-get clean
+sudo apt clean
 
 # Enable OFFLINE mode for next invoking stack.sh to be faster
 sed -i 's/#OFFLINE=/OFFLINE=/' /opt/devstack/local.conf
