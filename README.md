@@ -32,6 +32,7 @@ right place.
 
 [image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
 [ova-import-help]: README-virtualbox-import.md
+
 Instructions
 ------------
 
