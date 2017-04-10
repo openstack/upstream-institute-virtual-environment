@@ -100,8 +100,8 @@ finished running, you can open the OpenStack Horizon Dashboard using the
 
 DevStack install OpenStack software to `/opt/stack`. You can edit these files
 using you preferred editor of choice. You can install any software from the
-Ubuntu repoistories using the default `ubuntu` user (password: `ubuntu`, however
-no password needed for sudo).
+Ubuntu repoistories using the default `ubuntu` user (password: `openstack`,
+however no password needed for sudo).
 
 To log in to IRC, HexChat is set up for you. Please make sure that you replace the
 default user `ubuntu` upon first start before logging in to Freenode channels.
