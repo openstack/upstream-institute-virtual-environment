@@ -28,3 +28,6 @@ sudo apt clean
 sudo cp -ar "$REPO/files/etc" /
 sudo cp -ar "$REPO/files/home" /
 sudo chown -R "$USER:$GROUP" /home/
+
+# Set password
+echo "$USER:openstack" | sudo chpasswd

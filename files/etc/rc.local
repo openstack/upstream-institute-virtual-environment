@@ -11,7 +11,7 @@
 #
 # By default this script does nothing.
 
-dd if=/dev/zero of=/home/vagrant/swap.img bs=1M count=2048 >> /tmp/rc.local.log 2>&1
-mkswap /home/vagrant/swap.img >> /tmp/rc.local.log 2>&1
-swapon /home/vagrant/swap.img >> /tmp/rc.local.log 2>&1
+dd if=/dev/zero of=/swap.img bs=1M count=2048 >> /tmp/rc.local.log 2>&1
+mkswap /swap.img >> /tmp/rc.local.log 2>&1
+swapon /swap.img >> /tmp/rc.local.log 2>&1
 exit 0
