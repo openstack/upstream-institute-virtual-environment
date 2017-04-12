@@ -4,6 +4,6 @@ vagrant up
 vagrant halt
 
 echo "Creating Virtual Appliance..."
-vboxmanage sharedfolder remove devstack-training --name vagrant
-vboxmanage export devstack-training \
-    -o "dist/devstack-training-$(date +%Y%m%d-%H%M).ova"
+vboxmanage sharedfolder remove upstream-training --name vagrant
+vboxmanage export upstream-training \
+    -o "dist/upstream-training-$(date +%Y%m%d-%H%M).ova"

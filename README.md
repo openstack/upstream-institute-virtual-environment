@@ -50,6 +50,8 @@ Instructions
     This step takes about 10 minutes, it needs an internet connection,
     however the expected downloaded data stays low if using a fresh enough
     appliance.
+6. To lower the memory consumption, run `optimize-memory` which configures
+   horizon, keystone and mysql to use less memory.
 
 ### Building your own
 
@@ -84,7 +86,8 @@ After booting up the virtual machine, start setting up devstack. It takes around
 10 minutes to finish, until then you can get familiar with the environment the
 VM provides you with.
 
-Open up a terminal and run `/opt/devstack/stack.sh`
+Open up a terminal and run `/opt/devstack/stack.sh`. To reduce memory usage in
+your VM, also run `optimize-memory`.
 
 The four main software you will be using from the desktop during the training
 are

@@ -22,8 +22,6 @@ sudo apt install -y git gitk git-gui git-review tig
 # Install basic TUI applications
 sudo apt install -y htop mc tmux
 
-sudo apt clean
-
 # Copy configs
 sudo cp -ar "$REPO/files/etc" /
 sudo cp -ar "$REPO/files/home" /
@@ -31,3 +29,7 @@ sudo chown -R "$USER:$GROUP" /home/
 
 # Set password
 echo "$USER:openstack" | sudo chpasswd
+
+# Copy scripts
+sudo cp -ar "$REPO/files/usr" /
+

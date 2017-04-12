@@ -13,4 +13,3 @@ sudo apt install -y firefox xfce4-terminal xfce4-whiskermenu-plugin \
 # Configure virtualbox GUI
 sudo apt install -y virtualbox-guest-dkms virtualbox-guest-x11
 
-sudo apt clean
