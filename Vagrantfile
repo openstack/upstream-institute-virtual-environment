@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
         privileged: false, keep_color: true
     config.vm.provision :shell, inline: "/vagrant/cleanup.sh",
         privileged: false, keep_color: true
-    config.vm.box_check_update = false
+    config.vm.box_check_update = true
     config.ssh.forward_x11 = true
     config.ssh.forward_agent = true
 end
