@@ -6,14 +6,16 @@ export DEBIAN_FRONTEND=noninteractive
 
 REPO=$(dirname "$(readlink -f "$0")")/
 
+# Copy configs
+sudo cp -ar "$REPO/files/etc" /
+sudo cp -ar "$REPO/files/home" /
+sudo chown -R "$USER:$GROUP" /home/
+
+# Copy scripts
+sudo cp -ar "$REPO/files/usr" /
+
 sudo sed -i "s@http://archive.ubuntu.com@$APT_MIRROR@g" /etc/apt/sources.list
 sudo apt update
-sudo apt dist-upgrade -y
-
-# Fixing headless dictionaries-common install
-sudo apt install -y dictionaries-common
-sudo /usr/share/debconf/fix_db.pl
-sudo dpkg-reconfigure dictionaries-common
 sudo apt dist-upgrade -y
 
 # Install git workflow related software
@@ -22,14 +24,6 @@ sudo apt install -y git gitk git-gui git-review tig
 # Install basic TUI applications
 sudo apt install -y htop mc tmux
 
-# Copy configs
-sudo cp -ar "$REPO/files/etc" /
-sudo cp -ar "$REPO/files/home" /
-sudo chown -R "$USER:$GROUP" /home/
-
 # Set password
 echo "$USER:openstack" | sudo chpasswd
-
-# Copy scripts
-sudo cp -ar "$REPO/files/usr" /
 

@@ -17,7 +17,7 @@ right place.
 
 ### What do I need?
 
-* 6GB of **free** RAM (so at least 8GB in your laptop)
+* 5GB of **free** RAM (so at least 8GB in your laptop)
 * Recent CPU with at least 4 cores
 * 10GB disk space
 * [VirtualBox](https://www.virtualbox.org/)
@@ -73,6 +73,19 @@ then can be distributed and easily import into VirtualBox
 `./create-training-box.sh` is a handy tool that sets up everything with Vagrant
 and then creates the distributable box file.
 
+#### Requirements
+
+* `sudo apt install libguestfs-tools`
+* [libssl098:i386] is required for vmware vdiskmanager (shrink disks)
+
+    ```bash
+wget http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
+sudo dpkg -i libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
+    ```
+
+[vmvare-vdiskmanager]: https://kb.vmware.com/selfservice/viewAttachment.do?attachID=1023856-vdiskmanager-linux.7.0.1.zip&documentID=1023856
+[libssl098:i386]: http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/
+
 ### Learn how to easily set up devstack
 
 * [install-base.sh](install-base.sh) and 
@@ -86,8 +99,11 @@ After booting up the virtual machine, start setting up devstack. It takes around
 10 minutes to finish, until then you can get familiar with the environment the
 VM provides you with.
 
-Open up a terminal and run `/opt/devstack/stack.sh`. To reduce memory usage in
-your VM, also run `optimize-memory`.
+To set up an OpenStack installation with devstack, open a terminal and run:
+
+```bash
+/opt/devstack/stack.sh && optimize-memory
+```
 
 The four main software you will be using from the desktop during the training
 are
@@ -116,7 +132,7 @@ default security groups are not modified, so if you want to ping or SSH into
 your VM, you need to add the correct security rules (ICMP In/Egress from all,
 SSH ingress from all). Also beware that sometimes Horizon logs you in into the
 wrong project. To use the private networking by default, you need to log in as
-the default `demo` user (password: `admin`) and select `demo` as project.
+the default `demo` user (password: `openstack`) and select `demo` as project.
 
 Screenshots
 -----------

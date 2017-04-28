@@ -2,7 +2,7 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "upstream-training"
     config.vm.box = "ubuntu/xenial64"
     config.vm.provider "virtualbox" do |vb|
-        vb.memory = "4608"
+        vb.memory = "4096"
         vb.cpus = 2
         vb.name = "upstream-training"
         vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
@@ -10,6 +10,8 @@ Vagrant.configure(2) do |config|
         vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
         vb.customize ["modifyvm", :id, "--vram", "32"]
         vb.customize ["modifyvm", :id, "--natnet1", "192.168.10/24"]
+        # Xenial COM1 port logging
+        vb.customize ["modifyvm", :id, "--uartmode1", "disconnected"]
     end
     config.vm.provision :shell, inline: "/vagrant/install-base.sh",
         privileged: false, keep_color: true
@@ -22,6 +24,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision :shell, inline: "/vagrant/cleanup.sh",
         privileged: false, keep_color: true
     config.vm.box_check_update = true
+    config.vm.graceful_halt_timeout = 180
     config.ssh.forward_x11 = true
     config.ssh.forward_agent = true
 end
