@@ -1,7 +1,7 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center><a href=bit.ly/training-vm>http://bit.ly/training-vm</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/training-vm>training-vm</a></h2>
 
 Instructions
 ------------
@@ -41,7 +41,7 @@ Getting around in the VM
         > please make sure that you replace the default user `ubuntu` upon first
         > start before logging in to Freenode channels.
 
-3. When `stack.sh` finished running, you can open the OpenStack Horizon Dashboard
+3. When `stack.sh` finished running, you can open your [Horizon Dashboard]
     using the **DevStack** bookmark.
 
     * **Login**: `demo`
@@ -55,6 +55,8 @@ Getting around in the VM
 
 7. Enable SSH and ICMP ports on the security groups
 
+[Horizon Dashboard]: http://192.168.10.15/dashboard/
+
 Learn how to set up devstack
 ----------------------------
 
@@ -67,25 +69,31 @@ These are the steps used to provision the vm:
 Using latest devstack
 ---------------------
 
-Please do not update your openstack installation during the training. It requires bandwidth.
+Please  do  not update  your  openstack  installation  during the  training.  It
+requires bandwidth.
 
-If you want to keep on using the training VM for devstacking, you should disable offline mode in [local.conf](files/opt/devstack/local.conf). Also reconsider git related settings here.
+If you want to keep on using the training VM for devstacking, you should disable
+offline mode in [local.conf](files/opt/devstack/local.conf). Also reconsider git
+related settings here.
 
 Screenshots
 -----------
 
-| Devstack running | Geany with keystone code loaded | git and HexChat |
-|------------------|---------------------------------|-----------------|
-|![devstack]       |![geany]                         |![git-xchat]         |
+| ![devstack] | ![geany]    | ![git-hexchat] |
+|-------------|-------------|----------------|
+| devstack    | text editor | git and irc    |
 
 [devstack]: docs/01.png "Devstack running"
 [geany]: docs/02.png "Geany with keystone code loaded"
-[git-xchat]: docs/03.png "git and HexChat"
+[git-hexchat]: docs/03.png "git and HexChat"
 
 Advanced Topics
 ---------------
 
-This section is mainly for developers of the *VM*
+This section is mainly for developers of the *VM*, on the training you won't
+need this.
+
+**Using Vagrant**
 
 1. Set up VirtualBox
 2. Set up Vagrant
@@ -97,7 +105,7 @@ This section is mainly for developers of the *VM*
 
 Follow instructions [as for the prebuilt image](#using-a-prebuilt-image)
 
-### Roll your own image
+**Roll your own image**
 
 Essentially the same procedure, with exporting an ova archive at the end which
 then can be distributed and easily import into VirtualBox
