@@ -30,7 +30,7 @@ right place.
 | [Instructions](#using-a-prebuilt-image) | [Instructions](#building-your-own) |
 | [Download image][image] (2GB)           |                                    |
 
-[image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
+[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01/upstream-training-v2017.01.ova
 [ova-import-help]: README-virtualbox-import.md
 
 Instructions
@@ -75,12 +75,11 @@ and then creates the distributable box file.
 
 #### Requirements
 
-* `sudo apt install libguestfs-tools`
 * [libssl098:i386] is required for vmware vdiskmanager (shrink disks)
 
     ```bash
-wget http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
-sudo dpkg -i libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
+    wget http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
+    sudo dpkg -i libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
     ```
 
 [vmvare-vdiskmanager]: https://kb.vmware.com/selfservice/viewAttachment.do?attachID=1023856-vdiskmanager-linux.7.0.1.zip&documentID=1023856
