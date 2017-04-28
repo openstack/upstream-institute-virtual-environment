@@ -1,4 +1,5 @@
-[image] (https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova)
+[image]: https://s3.eu-central-1.amazonaws.com/openstack-training/devstack-vm.ova
+
 Help to import the VirtualBox [pre-built image][image]
 ======================================================
 Windows
