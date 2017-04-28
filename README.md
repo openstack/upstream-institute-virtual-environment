@@ -2,17 +2,17 @@ OpenStack Upstream Institute Virtual Environment
 ================================================
 
 <h2 align=center><a href=bit.ly/training-vm>http://bit.ly/training-vm</a></h2>
------------------------------------------------
 
 Instructions
 ------------
 
 1. Set up [VirtualBox]
 2. Go to the [releases] page and download the [latest VM image][image].
-3. Import the `ova` file (`File` -> `Import appliance...`) (on Windows? look [here][ova-import-help].)
+3. Import  the `ova` file  (`File` ->  `Import appliance...`)
+    > on  Windows? look [here][ova-import-help].)
 4. Start up the VM
 
-### Minimum requirements
+**Minimum requirements:**
 
 * 5GB of **free** RAM (so at least 8GB in your laptop)
 * Recent CPU with at least 4 cores
@@ -22,15 +22,6 @@ Instructions
 [image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01/upstream-training-v2017.01.ova
 [releases]: https://github.com/kmARC/openstack-training-virtual-environment/releases
 [ova-import-help]: README-virtualbox-import.md
-
-Learn how to set up devstack
-----------------------------
-
-These are the steps used to provision the vm:
-* [install-base.sh](install-base.sh) (Git and dependent packages)
-* [install-devstack.sh](install-devstack.sh) (Devstack)
-* [install-gui.sh](install-gui.sh) (Xfce desktop environment, GUI applications)
-* [files/](files/) - configuration files copied into the vm
 
 Getting around in the VM
 ------------------------
@@ -43,10 +34,10 @@ Getting around in the VM
 
 2. Explore the environment. The four main software you will be using from the
     desktop during the training are:
-    * a browser (Firefox)
-    * a terminal emulator
-    * a text editor (Geany, vim)
-    * an IRC client (HexChat)
+    * **Firefox** web browser
+    * **Xfce4-terminal** terminal emulator
+    * **Geany** text editor
+    * **HexChat** IRC client
         > please make sure that you replace the default user `ubuntu` upon first
         > start before logging in to Freenode channels.
 
@@ -63,6 +54,15 @@ Getting around in the VM
 6. Assign a floating IP
 
 7. Enable SSH and ICMP ports on the security groups
+
+Learn how to set up devstack
+----------------------------
+
+These are the steps used to provision the vm:
+* [install-base.sh](install-base.sh) - Git and dependent packages
+* [install-devstack.sh](install-devstack.sh) - Devstack
+* [install-gui.sh](install-gui.sh) - Xfce desktop environment, GUI applications
+* [files/](files/) - configuration files copied into the vm
 
 Using latest devstack
 ---------------------
