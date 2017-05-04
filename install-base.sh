@@ -27,3 +27,7 @@ sudo apt install -y htop mc tmux
 # Set password
 echo "$USER:openstack" | sudo chpasswd
 
+# Disable Console serial port redirection
+sudo sed -i "s/console=ttyS0//g" /etc/default/grub
+sudo sed -i "s/console=ttyS0//g" /etc/default/grub.d/*
+sudo update-grub

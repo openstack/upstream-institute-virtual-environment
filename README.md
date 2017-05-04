@@ -6,22 +6,34 @@ OpenStack Upstream Institute Virtual Environment
 Instructions
 ------------
 
+### Using VirtualBox
+
 1. Set up [VirtualBox]
 2. Go to the [releases] page and download the [latest VM image][image].
 3. Import  the `ova` file  (`File` ->  `Import appliance...`)
     > on  Windows? look [here][ova-import-help].)
 4. Start up the VM
 
-**Minimum requirements:**
+### Using VMware player
+
+1. Set up [VMware player]
+2. Go to the [releases] page and download the [latest VM image][image].
+3. Open the `ova` file (`File` -> `Open a Virtual Machine`)
+    > A warning dialog might appear. Click on `Retry`
+4. Start up the VM
+
+[VirtualBox]: https://www.virtualbox.org/wiki/Downloads
+[VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
+[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01/upstream-training-v2017.01.ova
+[releases]: https://github.com/kmARC/openstack-training-virtual-environment/releases
+[ova-import-help]: README-virtualbox-import.md
+
+### Minimum requirements
 
 * 5GB of **free** RAM (so at least 8GB in your laptop)
 * Recent CPU with at least 4 cores
 * 15GB disk space
 
-[VirtualBox]: https://www.virtualbox.org/wiki/Downloads
-[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01/upstream-training-v2017.01.ova
-[releases]: https://github.com/kmARC/openstack-training-virtual-environment/releases
-[ova-import-help]: README-virtualbox-import.md
 
 Getting around in the VM
 ------------------------
@@ -42,7 +54,7 @@ Getting around in the VM
         > start before logging in to Freenode channels.
 
 3. When `stack.sh` finished running, you can open your [Horizon Dashboard]
-    using the **DevStack** bookmark.
+    (http://localhost/) or on VirtualBox using the **DevStack** bookmark
 
     * **Login**: `demo`
     * **Password**: `openstack`
@@ -55,7 +67,7 @@ Getting around in the VM
 
 7. Enable SSH and ICMP ports on the security groups
 
-[Horizon Dashboard]: http://192.168.10.15/dashboard/
+[Horizon Dashboard]: http://localhost/
 
 Learn how to set up devstack
 ----------------------------
