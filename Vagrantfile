@@ -12,6 +12,13 @@ Vagrant.configure(2) do |config|
         vb.customize ["modifyvm", :id, "--natnet1", "192.168.10/24"]
         # Xenial COM1 port logging
         vb.customize ["modifyvm", :id, "--uartmode1", "disconnected"]
+        # Set disks as SSD (fixes OSX Virtualbox Ubuntu boot problems)
+        vb.customize ["storageattach", :id, "--storagectl", "SCSI", 
+                                            "--port", "0", 
+                                            "--nonrotational", "on"]
+        vb.customize ["storageattach", :id, "--storagectl", "SCSI", 
+                                            "--port", "1", 
+                                            "--nonrotational", "on"]
     end
     config.vm.provision :shell, inline: "/vagrant/install-base.sh",
         privileged: false, keep_color: true
