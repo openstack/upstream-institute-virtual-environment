@@ -24,7 +24,7 @@ Instructions
 
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
-[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01/upstream-training-v2017.01.1.ova
+[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/v2017.01.1/upstream-training-v2017.01.1.ova
 [releases]: https://github.com/kmARC/openstack-training-virtual-environment/releases
 [ova-import-help]: README-virtualbox-import.md
 
