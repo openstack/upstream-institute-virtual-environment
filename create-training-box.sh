@@ -15,7 +15,8 @@ VMDK=$(vboxmanage showvminfo upstream-training --machinereadable \
                   | grep SCSI-0-0 \
                   | cut -d'"' -f4)
 
-echo "Schrinking image..."
+echo "Shrinking image..."
+./dist/vmware-vdiskmanager -d "$VMDK"
 ./dist/vmware-vdiskmanager -k "$VMDK"
 
 echo "Creating Virtual Appliance..."

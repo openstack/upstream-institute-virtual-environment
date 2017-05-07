@@ -21,11 +21,23 @@ done
 sudo updatedb
 
 # Remove unused packages
-sudo apt autoremove --purge -y humanity-icon-theme snapd
+sudo apt autoremove --purge -y humanity-icon-theme snapd lxc.* lxd.*
 
 # Empty packages cache
 sudo apt clean
+sudo apt autoclean
+sudo rm -rf /var/lib/apt/lists/*
+
+# Remove mysql databases (will be recreated by stack.sh
+for db in cinder glance keystone neutron nova nova_api nova_cell0; do
+    echo "drop database $db;" | mysql -uroot -popenstack
+done
+
+# Remove log files
+sudo rm -rf /var/log/*
 
 # Zero out unused space
 dd if=/dev/zero of=~/ZERO bs=1M status=progress
+sync
 rm -rf ~/ZERO
+

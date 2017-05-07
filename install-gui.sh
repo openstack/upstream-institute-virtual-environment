@@ -3,7 +3,6 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Set up a desktop environment
-sudo apt install -y linux-image-extra-virtual
 sudo apt install -y xserver-xorg-input-evdev
 sudo apt install -y adwaita-icon-theme-full gnome-themes-standard \
                     gtk2-engines-pixbuf thunar xfce4-panel xfce4-session \

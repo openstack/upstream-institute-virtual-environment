@@ -6,7 +6,8 @@ REPO=$(dirname "$(readlink -f "$0")")/
 sudo mkdir /opt/devstack
 sudo chown -R "$USER:$GROUP" /opt/devstack
 
-git clone https://git.openstack.org/openstack-dev/devstack /opt/devstack
+git clone --depth=1 https://git.openstack.org/openstack-dev/devstack \
+                    /opt/devstack
 cp -ar "$REPO/files/opt" /
 
 /opt/devstack/stack.sh
