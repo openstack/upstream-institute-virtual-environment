@@ -47,3 +47,5 @@ EOF
 
 sudo service mysql restart
 
+# Unstack
+/opt/devstack/unstack.sh
