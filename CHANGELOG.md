@@ -12,9 +12,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
 ## [v2017.01.1] Boston summit - Patch #1
 
+### Changed
+- Devstack installation is forced to use systemd instead of screen
+
 ### Fixed
 - Works with VMware player
-- USE_SCREEN=True directive for devstack
 
 [v2017.01.1]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2017.01...v2017.01.1
 
