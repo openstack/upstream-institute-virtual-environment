@@ -3,6 +3,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## [Unreleased]
+
+### Fixed
+- Storage is SSD by default (caused problems with volume groups under MacOS)
+
+[Unreleased]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2017.01.1...next
+
+## [v2017.01.1] Boston summit - Patch #1
+
+### Fixed
+- Works with VMware player
+- USE_SCREEN=True directive for devstack
+
+[v2017.01.1]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2017.01...v2017.01.1
+
 ## [v2017.01] Boston summit
 
 ### Changed
