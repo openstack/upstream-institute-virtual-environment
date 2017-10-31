@@ -39,7 +39,7 @@ user_pref("browser.search.region", "CH");
 user_pref("browser.sessionstore.upgradeBackup.latestBuildID", "20160919213721");
 user_pref("browser.slowStartup.averageTime", 2435);
 user_pref("browser.slowStartup.samples", 2);
-user_pref("browser.startup.homepage", "https://github.com/kmARC/openstack-training-virtual-environment/blob/master/README.md#getting-around-in-the-vm");
+user_pref("browser.startup.homepage", "http://bit.ly/upstream-institute-vm");
 user_pref("browser.startup.homepage_override.buildID", "20160919213721");
 user_pref("browser.startup.homepage_override.mstone", "49.0");
 user_pref("browser.tabs.remote.autostart.2", true);

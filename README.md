@@ -1,7 +1,7 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center>bit.ly/<a href=http://bit.ly/training-vm>training-vm</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-institute-vm>upstream-institute-vm</a></h2>
 
 Instructions
 ------------
@@ -38,13 +38,7 @@ Instructions
 Getting around in the VM
 ------------------------
 
-1. Open a terminal and start devstack
-    ``` bash
-    /opt/devstack/stack.sh && optimize-memory
-    ```
-    This step takes about 10 minutes. 
-
-2. Explore the environment. The four main software you will be using from the
+1. Explore the environment. The four main software you will be using from the
     desktop during the training are:
     * **Firefox** web browser
     * **Xfce4-terminal** terminal emulator
@@ -53,19 +47,19 @@ Getting around in the VM
         > please make sure that you replace the default user `ubuntu` upon first
         > start before logging in to Freenode channels.
 
-3. When `stack.sh` finished running, you can open your [Horizon Dashboard]
+2. When `stack.sh` has finished running, you can open your [Horizon Dashboard]
     (http://localhost/) or on VirtualBox using the **DevStack** bookmark
 
     * **Login**: `demo`
     * **Password**: `openstack`
 
-4. Select the `demo` project
+3. Select the `demo` project
 
-5. Start a VM. Use a tiny flavor. A CirrOS image is already set up by devstack
+4. Start a VM. Use a tiny flavor. A CirrOS image is already set up by devstack
 
-6. Assign a floating IP
+5. Assign a floating IP
 
-7. Enable SSH and ICMP ports on the security groups
+6. Enable SSH and ICMP ports on the security groups
 
 [Horizon Dashboard]: http://localhost/
 

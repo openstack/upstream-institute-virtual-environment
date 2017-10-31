@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 VDISKMANAGER_DOWNLOAD='https://kb.vmware.com/selfservice/viewAttachment.do?attachID=1023856-vdiskmanager-linux.7.0.1.zip&documentID=1023856'
 
 vagrant up

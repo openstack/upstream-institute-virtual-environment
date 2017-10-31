@@ -8,7 +8,7 @@ sudo chown -R "$USER:$GROUP" /opt/devstack
 
 git clone --depth=1 https://git.openstack.org/openstack-dev/devstack \
                     /opt/devstack
-cp -ar "$REPO/files/opt" /
+cp -r "$REPO/files/opt" /
 
 /opt/devstack/stack.sh
 

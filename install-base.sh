@@ -7,13 +7,14 @@ export DEBIAN_FRONTEND=noninteractive
 REPO=$(dirname "$(readlink -f "$0")")/
 
 # Copy configs
-sudo cp -ar "$REPO/files/etc" /
-sudo cp -ar "$REPO/files/home" /
+sudo cp -r "$REPO/files/etc" /
+sudo cp -r "$REPO/files/home" /
 sudo chown -R "$USER:$GROUP" /home/
 
 # Copy scripts
-sudo cp -ar "$REPO/files/usr" /
+sudo cp -r "$REPO/files/usr" /
 
+# Update and upgrade
 sudo sed -i "s@http://archive.ubuntu.com@$APT_MIRROR@g" /etc/apt/sources.list
 sudo apt update
 sudo apt dist-upgrade -y
