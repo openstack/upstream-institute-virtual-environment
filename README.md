@@ -47,7 +47,7 @@ Getting around in the VM
         > please make sure that you replace the default user `ubuntu` upon first
         > start before logging in to Freenode channels.
 
-2. When `stack.sh` has finished running, you can open your [Horizon Dashboard]
+2. When `stack.sh` finished running, you can open your [Horizon Dashboard]
     (http://localhost/) or on VirtualBox using the **DevStack** bookmark
 
     * **Login**: `demo`
@@ -99,34 +99,26 @@ Advanced Topics
 This section is mainly for developers of the *VM*, on the training you won't
 need this.
 
-**Using Vagrant**
-
-1. Set up VirtualBox
-2. Set up Vagrant
-3. `git clone https://github.com/kmARC/openstack-training-virtual-environment`
-4. `cd openstack-training-virtual-environment`
-5. `vagrant up`
-6. `vagrant reload`
-7. `vagrant ssh`
-
-Follow instructions [as for the prebuilt image](#using-a-prebuilt-image)
-
 **Roll your own image**
 
-Essentially the same procedure, with exporting an ova archive at the end which
-then can be distributed and easily import into VirtualBox
+The image can be built using [diskimage-builder][dib].
 
-1. install [libssl098:i386]
-    (required for vmware vdiskmanager to shrink disks)
+1. Install prerequisites
     ```bash
-    wget http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
-    sudo dpkg -i libssl0.9.8_0.9.8o-7ubuntu4_i386.deb
+    ./prereqs.sh
     ```
-2. `./create-training-box.sh` 
-    Provisions the VM and creates the distributable ova archive.
+    This step needs root/sudo rights to install tools like qemu-img
+2. Activate the python virtual environment
+    ```bash
+    . .env/bin/activate
+    ```
+3. Create disk image with provided convenience script
+    ```bash
+    ./create-training-box.sh
+    ```
+4. The generated image can be found under `dist/`
 
-[vmvare-vdiskmanager]: https://kb.vmware.com/selfservice/viewAttachment.do?attachID=1023856-vdiskmanager-linux.7.0.1.zip&documentID=1023856
-[libssl098:i386]: http://security.ubuntu.com/ubuntu/ubuntu/pool/universe/o/openssl098/
+[dib]: https://docs.openstack.org/diskimage-builder/latest/
 
 License
 -------

@@ -2,26 +2,22 @@
 
 set -e
 
-VDISKMANAGER_DOWNLOAD='https://kb.vmware.com/selfservice/viewAttachment.do?attachID=1023856-vdiskmanager-linux.7.0.1.zip&documentID=1023856'
+VMDK=upstream-training-disk001.vmdk
+export ELEMENTS_PATH=./elements/
 
-vagrant up
-vagrant halt
+mkdir -p tmp
 
-if [[ ! -e dist/vmware-vdiskmanager ]]; then
-    wget "$VDISKMANAGER_DOWNLOAD" -O /tmp/vmware-vdiskmanager.zip
-    unzip /tmp/vmware-vdiskmanager.zip -d dist/
-    mv dist/*vmware-vdiskmanager* dist/vmware-vdiskmanager
-fi
+disk-image-create \
+    -o "tmp/$VMDK" \
+    -t vmdk \
+    --qemu-img-options subformat=streamOptimized \
+    --image-size 40 \
+    upstream-training
 
-VMDK=$(vboxmanage showvminfo upstream-training --machinereadable \
-                  | grep SCSI-0-0 \
-                  | cut -d'"' -f4)
+DIST="dist/upstream-training-$(date +%Y%m%d-%H%M).ova"
 
-echo "Shrinking image..."
-./dist/vmware-vdiskmanager -d "$VMDK"
-./dist/vmware-vdiskmanager -k "$VMDK"
+cp upstream-training.ovf tmp/
 
-echo "Creating Virtual Appliance..."
-vboxmanage sharedfolder remove upstream-training --name vagrant
-vboxmanage export upstream-training \
-    -o "dist/upstream-training-$(date +%Y%m%d-%H%M).ova"
+pushd tmp/
+tar -cf "../$DIST" upstream-training.ovf "$VMDK"
+popd

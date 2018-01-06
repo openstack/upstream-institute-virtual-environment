@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password openstack'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password openstack'
+

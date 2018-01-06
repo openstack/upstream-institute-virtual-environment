@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Empty user caches
+set -x
+rm -rf ~/.cache
+rm -rf /home/ubuntu/.cache
+
+# Remove compiled pyc files
+sudo updatedb
+count=$(locate -- *.pyc | wc -l)
+i=1
+for pyc in $(locate -- *.pyc); do
+    rm -rf "$pyc"
+    echo -en "\r$((i++)) of $count deleted"
+done
+echo ""
+sudo updatedb
+
+# Empty packages cache
+apt clean
+apt autoclean
+apt update
+
+# Disable Console serial port redirection
+sed -i "s/console=ttyS0//g" /etc/default/grub
+sed -i "s/console=ttyS0//g" /etc/default/grub.d/*
+update-grub
+
+# Set hostname
+echo "upstream-training" > "/etc/hostname"
+echo "127.0.1.1	upstream-training" >> "/etc/hosts"

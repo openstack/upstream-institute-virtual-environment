@@ -1,0 +1,6 @@
+ubuntu-minimal
+growroot
+vm
+package-installs
+install-static
+cleanup-kernel-initrd

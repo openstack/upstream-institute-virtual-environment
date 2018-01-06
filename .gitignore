@@ -1,3 +1,4 @@
-.vagrant
-dist/**
+.env/
+tmp/*
+dist/
 !**/.gitkeep

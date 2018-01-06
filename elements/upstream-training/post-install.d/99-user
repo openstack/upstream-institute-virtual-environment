@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Create ubuntu user
+useradd -d /home/ubuntu -p "openstack" -U -s /bin/bash -G adm,dialout,cdrom,floppy,sudo,audio,dip,video,plugdev ubuntu
+cp -ar /etc/skel/.[!.]* /home/ubuntu
+chown -R ubuntu:ubuntu /home/ubuntu
+echo "ubuntu:openstack" | chpasswd
+
+# Enable shared folder access
+adduser ubuntu vboxsf
+
+# Set devstack repos acces
+chown -R ubuntu:ubuntu /opt/devstack
+chown -R ubuntu:ubuntu /opt/stack
+
+
