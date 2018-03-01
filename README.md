@@ -8,7 +8,7 @@ Instructions
 
 ### Using VirtualBox
 
-1. Set up [VirtualBox]
+1. Set up [VirtualBox] and add the [extension pack]
 2. Go to the [releases] page and download the [latest VM image][image].
 3. Import  the `ova` file  (`File` ->  `Import appliance...`)
     > on  Windows? look [here][ova-import-help].)
@@ -22,6 +22,7 @@ Instructions
     > A warning dialog might appear. Click on `Retry`
 4. Start up the VM
 
+[extension pack]: https://download.virtualbox.org/virtualbox/5.2.8/Oracle_VM_VirtualBox_Extension_Pack-5.2.8-121009.vbox-extpack
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
 [image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/next/upstream-training-alpha.ova
