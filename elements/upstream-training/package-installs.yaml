@@ -59,6 +59,9 @@ xserver-xorg-video-vmware:
 spice-vdagent:
 xserver-xorg-video-qxl:
 
+# Enable cloud-init (for running DevStack in OpenStack)
+cloud-init:
+
 # Install devstack required packages
 # This list is generated from the list of package differences between a
 # pre- and post-install of devstack
