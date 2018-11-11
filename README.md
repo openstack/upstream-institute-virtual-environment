@@ -1,7 +1,7 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-institute-vm>upstream-institute-vm</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/vm-2018-berlin-v1>upstream-institute-vm</a></h2>
 
 Instructions
 ------------
@@ -9,7 +9,7 @@ Instructions
 ### Using VirtualBox
 
 1. Set up [VirtualBox] with [Extension Pack]
-2. Go to the [releases] page and download the [latest VM image][image].
+2. Download the [latest VM image][image].
 3. Import  the `ova` file  (`File` ->  `Import appliance...`)
     > on  Windows? look [here][ova-import-help].)
 4. Start up the VM
@@ -17,15 +17,14 @@ Instructions
 ### Using VMware player
 
 1. Set up [VMware player]
-2. Go to the [releases] page and download the [latest VM image][image].
+2. Download the [latest VM image][image].
 3. Open the `ova` file (`File` -> `Open a Virtual Machine`)
     > A warning dialog might appear. Click on `Retry`
 4. Start up the VM
 
 [Extension Pack]: http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#extpack
-[image]: https://github.com/kmARC/openstack-training-virtual-environment/releases/download/next/upstream-training-alpha.ova
+[image]: http://bit.ly/vm-2018-berlin-v1
 [ova-import-help]: README-virtualbox-import.md
-[releases]: https://github.com/kmARC/openstack-training-virtual-environment/releases
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
 
