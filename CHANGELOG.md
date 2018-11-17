@@ -3,12 +3,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
-## [Unreleased]
+## [v2018.02] Berlin summit
+
+### Changed
+- Changed from Vagrant provisioning to disk-image-creator
+- Fixed version to Ubuntu Xenial Xerus (18.04 LTS)
+
+### Added
+- Kept Vagrantfile to provision a CentOS VM that can build the Traning VM
+- Updated documentation for Virtualbox
 
 ### Fixed
 - Storage is SSD by default (caused problems with volume groups under MacOS)
+- Virtualbox modesetting driver works correctly
+- Passwords are consistently set to `openstack`
 
-[Unreleased]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2017.01.1...next
+[v2018.02]: https://github.com/openstack/upstream-institute-virtual-environment/compare/v2017.01.1...v2018.02
 
 ## [v2017.01.1] Boston summit - Patch #1
 
@@ -18,7 +28,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Fixed
 - Works with VMware player
 
-[v2017.01.1]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2017.01...v2017.01.1
+[v2017.01.1]: https://github.com/openstack/upstream-institute-virtual-environment/compare/v2017.01...v2017.01.1
 
 ## [v2017.01] Boston summit
 
@@ -37,10 +47,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Fixed
 - There's no need to fiddle with network settings anymore
 
-[v2017.01]: https://github.com/kmarc/openstack-training-virtual-environment/compare/v2016.02...v2017.01
+[v2017.01]: https://github.com/openstack/upstream-institute-virtual-environment/compare/v2016.02...v2017.01
 
 ## [v2016.02] Barcelona summit
 
 - Initial release
 
-[v2016.02]: https://github.com/kmarc/openstack-training-virtual-environment/tree/v2016.02
+[v2016.02]: https://github.com/openstack/upstream-institute-virtual-environment/tree/v2016.02

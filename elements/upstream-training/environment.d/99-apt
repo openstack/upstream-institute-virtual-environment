@@ -1,1 +1,2 @@
-DIB_DEBIAN_COMPONENTS=main,universe,multiverse,non-free
+DIB_DEBIAN_COMPONENTS=main,universe,multiverse
+DIB_RELEASE=xenial
