@@ -46,6 +46,7 @@ xfce4-terminal:
 xfce4-whiskermenu-plugin:
 
 # Configure virtualbox GUI
+linux-headers-generic:
 virtualbox-guest-dkms:
 virtualbox-guest-x11:
 
@@ -59,8 +60,8 @@ xserver-xorg-video-vmware:
 spice-vdagent:
 xserver-xorg-video-qxl:
 
-# Enable cloud-init (for running DevStack in OpenStack)
-cloud-init:
+# # Enable cloud-init (for running DevStack in OpenStack)
+# cloud-init:
 
 # Install devstack required packages
 # This list is generated from the list of package differences between a
@@ -76,6 +77,7 @@ cryptsetup:
 curl:
 dnsmasq-base:
 dnsmasq-utils:
+dosfstools:
 dstat:
 ebtables:
 fakeroot:
@@ -106,9 +108,9 @@ libpq-dev:
 libsasl2-dev:
 libssl-dev:
 libsystemd-dev:
-libsystemd0:
 libvirt-bin:
 libvirt-dev:
+libvirt-daemon-system:
 libxml2-dev:
 libxslt1-dev:
 libyaml-dev:
@@ -132,7 +134,6 @@ python-mysqldb:
 python-psutil:
 python-virtualenv:
 python2.7:
-python3:
 qemu-system:
 qemu-utils:
 rabbitmq-server:

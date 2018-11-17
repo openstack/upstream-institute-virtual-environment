@@ -2,11 +2,11 @@
 
 # Empty user caches
 set -x
-rm -rf ~/.cache
+rm -rf /root/.cache
 rm -rf /home/ubuntu/.cache
 
 # Remove compiled pyc files
-sudo updatedb
+updatedb
 count=$(locate -- *.pyc | wc -l)
 i=1
 for pyc in $(locate -- *.pyc); do
@@ -14,7 +14,7 @@ for pyc in $(locate -- *.pyc); do
     echo -en "\r$((i++)) of $count deleted"
 done
 echo ""
-sudo updatedb
+updatedb
 
 # Empty packages cache
 apt clean
