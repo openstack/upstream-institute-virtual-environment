@@ -1,2 +1,2 @@
 DIB_DEBIAN_COMPONENTS=main,universe,multiverse
-DIB_RELEASE=xenial
+DIB_RELEASE=bionic

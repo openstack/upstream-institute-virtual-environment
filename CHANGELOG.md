@@ -3,11 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## Unreleased
+
+### Changed
+- Moved to bionic (18.04 LTS)
+
+### Added
+- `import-virsh` script to convert ova archive to libvirt qemu/kvm format
+
 ## [v2018.02] Berlin summit
 
 ### Changed
 - Changed from Vagrant provisioning to disk-image-creator
-- Fixed version to Ubuntu Xenial Xerus (18.04 LTS)
+- Fixed version to Ubuntu Xenial Xerus (16.04 LTS)
 
 ### Added
 - Kept Vagrantfile to provision a CentOS VM that can build the Traning VM

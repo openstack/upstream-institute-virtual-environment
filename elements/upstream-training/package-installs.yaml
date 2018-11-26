@@ -52,8 +52,7 @@ virtualbox-guest-x11:
 
 # Configure vmware GUI
 open-vm-tools-desktop:
-open-vm-tools-dkms:
-xserver-xorg-input-vmmouse:
+open-vm-tools:
 xserver-xorg-video-vmware:
 
 # Configure qemu-kvm GUI
@@ -108,9 +107,9 @@ libpq-dev:
 libsasl2-dev:
 libssl-dev:
 libsystemd-dev:
-libvirt-bin:
-libvirt-dev:
+libvirt-clients:
 libvirt-daemon-system:
+libvirt-dev:
 libxml2-dev:
 libxslt1-dev:
 libyaml-dev:
@@ -145,7 +144,6 @@ sysfsutils:
 tcpdump:
 tgt:
 thin-provisioning-tools:
-ubuntu-cloud-keyring:
 unzip:
 uuid-runtime:
 vlan:
