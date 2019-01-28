@@ -1,7 +1,7 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center>bit.ly/<a href=http://bit.ly/vm-2018-berlin-v1>upstream-institute-vm</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-institute>upstream-institute</a></h2>
 
 Instructions
 ------------
@@ -38,7 +38,14 @@ Instructions
 Getting around in the VM
 ------------------------
 
-1. Explore the environment. The four main software you will be using from the
+1. Run `stack.sh` to install devstack. It might take 10-20 minutes.
+
+    ```bash
+    cd /opt/devstack
+    ./stack.sh
+    ```
+
+2. Explore the environment. The four main software you will be using from the
     desktop during the training are:
     * **Firefox** web browser
     * **Xfce4-terminal** terminal emulator
@@ -46,37 +53,52 @@ Getting around in the VM
     * **HexChat** IRC client
         > please make sure that you replace the default user `ubuntu` upon first
         > start before logging in to Freenode channels.
+    * **DevStack** is run from /opt/devstack
+    * **OpenStack** source code is placed to /opt/stack
 
-2. When `stack.sh` finished running, you can open your [Horizon Dashboard]
-    (http://localhost/) or on VirtualBox using the **DevStack** bookmark
+3. When `stack.sh` finished running, you can  open your [Horizon Dashboard] or on VirtualBox using
+   the **DevStack** bookmark
 
     * **Login**: `demo`
     * **Password**: `openstack`
 
-3. Select the `demo` project
+[Horizon Dashboard]: http://localhost/dashboard
 
-4. Start a VM. Use a tiny flavor. A CirrOS image is already set up by devstack
+5. In the upper left corner, switch from `invisible_to_admin` to the `demo` project
 
-5. Assign a floating IP
+6. Start a VM (no volume needed, use the nano flavor). A CirrOS image is already set up by devstack
 
-6. Enable SSH and ICMP ports on the security groups
+7. Associate a floating IP. Initially, no Floating IP's allocated, you can add one with the `+`
+   button. An example would be `172.124.4.45`. It may stuck at the loading screen - in this case,
+   reload the dashboard.
 
-[Horizon Dashboard]: http://localhost/
+8. Enable SSH and ICMP ports on the default security group. Select "Network" -> "Security groups"
+   and "Manage rules" -> "Add rule"
 
-Learn how to set up devstack
-----------------------------
+9. Try to connect with SSH to the floating IP.
 
-These are the steps used to provision the vm:
-* [install-base.sh](install-base.sh) - Git and dependent packages
-* [install-devstack.sh](install-devstack.sh) - Devstack
-* [install-gui.sh](install-gui.sh) - Xfce desktop environment, GUI applications
-* [files/](files/) - configuration files copied into the vm
+    ```bash
+    $ ssh root@<FLOATING_IP> -l cirros # password: gocubsgo
+
+    # Example: ssh root@172.24.4.45 -l cirros
+    ```
+
+10. DNS might not work in the cirros vm, in this case:
+
+    ```bash
+    echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf`
+    ```
+
+11. **IMPORTANT**: To keep your devstack environment across reboots, **do not reboot / halt the VM**,
+   but instead use "Save the machine state" from VirtualBox quit dialog.
+
+Devstack installs using the [99-devstack.sh](elements/upstream-training/install.d/99-devstack.sh)
+script.
 
 Using latest devstack
 ---------------------
 
-Please  do  not update  your  openstack  installation  during the  training.  It
-requires bandwidth.
+Please **do not** update your openstack installation during the training. It requires bandwidth.
 
 If you want to keep on using the training VM for devstacking, you should disable
 offline mode in [local.conf](files/opt/devstack/local.conf). Also reconsider git
@@ -101,22 +123,33 @@ need this.
 
 **Roll your own image**
 
-The image can be built using [diskimage-builder][dib].
+The image can be built using [diskimage-builder][dib] in a convenience vagrant machine from
+[vm-creator-vm](./vm-creator-vm/) directory
 
-1. Install prerequisites
+
+1. Spin up vm-creator-vm:
+    ```bash
+    cd vm-creator-vm/
+    vagrant up
+    vagrant ssh
+    cd git-repo # this directory contains the git repository of the upsteram-institute-vm
+    ```
+    This will boot up a VirtualBox VM with CentOS 7
+
+2. Install prerequisites in the VM
     ```bash
     ./prereqs.sh
     ```
     This step needs root/sudo rights to install tools like qemu-img
-2. Activate the python virtual environment
+3. Activate the python virtual environment
     ```bash
     . .env/bin/activate
     ```
-3. Create disk image with provided convenience script
+4. Create disk image with provided convenience script
     ```bash
     ./create-training-box.sh
     ```
-4. The generated image can be found under `dist/`
+5. The generated image can be found under `dist/`
 
 [dib]: https://docs.openstack.org/diskimage-builder/latest/
 

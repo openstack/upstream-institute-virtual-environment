@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Changed
 - Moved to bionic (18.04 LTS)
 
+### Fixed
+- Updated README with correct links and easier to follow instructions
+- Fixed bookmarks in Firefox
+
 ### Added
 - `import-virsh` script to convert ova archive to libvirt qemu/kvm format
 

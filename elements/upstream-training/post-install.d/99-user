@@ -6,6 +6,10 @@ cp -ar /etc/skel/.[!.]* /home/ubuntu
 chown -R ubuntu:ubuntu /home/ubuntu
 echo "ubuntu:openstack" | chpasswd
 
+# Compile firefox places
+(cd /home/ubuntu/.mozilla/firefox/profile && sqlite3 places.sqlite < places.sql)
+chown -R ubuntu:ubuntu /home/ubuntu
+
 # Enable shared folder access
 adduser ubuntu vboxsf
 
