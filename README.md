@@ -23,7 +23,7 @@ Instructions
 4. Start up the VM
 
 [Extension Pack]: http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#extpack
-[image]: http://bit.ly/vm-2018-berlin-v1
+[image]: http://bit.ly/vm-2019-denver-v1
 [ova-import-help]: README-virtualbox-import.md
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
