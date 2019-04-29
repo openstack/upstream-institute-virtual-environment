@@ -1,9 +1,9 @@
-https://git.openstack.org/openstack/nova.git
-https://git.openstack.org/openstack/horizon.git
-https://git.openstack.org/openstack/keystone.git
-https://git.openstack.org/openstack/cinder.git
+https://opendev.org/openstack/nova.git
+https://opendev.org/openstack/horizon.git
+https://opendev.org/openstack/keystone.git
+https://opendev.org/openstack/cinder.git
 https://github.com/novnc/noVNC.git
-https://git.openstack.org/openstack/neutron.git
-https://git.openstack.org/openstack/requirements.git
-https://git.openstack.org/openstack/tempest.git
-https://git.openstack.org/openstack/glance.git
+https://opendev.org/openstack/neutron.git
+https://opendev.org/openstack/requirements.git
+https://opendev.org/openstack/tempest.git
+https://opendev.org/openstack/glance.git

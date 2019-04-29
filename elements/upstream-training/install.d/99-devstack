@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # # Install devstack
-git clone --depth=1 https://git.openstack.org/openstack-dev/devstack \
+git clone --depth=1 https://opendev.org/openstack/devstack \
                     /opt/devstack
 mv /tmp/local.conf /opt/devstack/
 
