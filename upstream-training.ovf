@@ -121,7 +121,7 @@
           <Order position="3" device="None"/>
           <Order position="4" device="None"/>
         </Boot>
-        <Display VRAMSize="32" accelerate3D="true"/>
+        <Display controller="VBoxSVGA" VRAMSize="32" accelerate3D="true"/>
         <VideoCapture fps="25" options="ac_enabled=false"/>
         <BIOS>
           <IOAPIC enabled="true"/>
