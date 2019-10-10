@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
 ## Unreleased
+- Moved to bionic (18.04 LTS)
+
+### Changed
+- Oracle VirtualBox 6.0 is the minimum version for this bundle
+
+### Fixed
+- Switched to VBoxSVGA controller
+
+## [v2019.01] Denver summit
 
 ### Changed
 - Moved to bionic (18.04 LTS)

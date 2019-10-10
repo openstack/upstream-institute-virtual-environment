@@ -17,7 +17,7 @@ done
 popd
 
 pushd /opt/devstack/files/
-wget http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img
+wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
 popd
 
 # su ubuntu -c '/opt/devstack/stack.sh'

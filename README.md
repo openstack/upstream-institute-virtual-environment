@@ -8,7 +8,7 @@ Instructions
 
 ### Using VirtualBox
 
-1. Set up [VirtualBox] with [Extension Pack]
+1. Set up [VirtualBox] version 6 with [Extension Pack]
 2. Download the [latest VM image][image].
 3. Import  the `ova` file  (`File` ->  `Import appliance...`)
     > on  Windows? look [here][ova-import-help].)
@@ -23,7 +23,7 @@ Instructions
 4. Start up the VM
 
 [Extension Pack]: http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#extpack
-[image]: http://bit.ly/vm-2019-denver-v1
+[image]: http://bit.ly/vm-2019-shanghai-v1
 [ova-import-help]: README-virtualbox-import.md
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
