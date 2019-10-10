@@ -3,14 +3,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
-## Unreleased
-- Moved to bionic (18.04 LTS)
+## [v2019.02] Shanghai summit
 
 ### Changed
 - Oracle VirtualBox 6.0 is the minimum version for this bundle
 
 ### Fixed
 - Switched to VBoxSVGA controller
+
+[v2019.02]: https://github.com/openstack/upstream-institute-virtual-environment/compare/v2019.01...v2019.02
 
 ## [v2019.01] Denver summit
 
@@ -23,6 +24,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
 ### Added
 - `import-virsh` script to convert ova archive to libvirt qemu/kvm format
+
+[v2019.01]: https://github.com/openstack/upstream-institute-virtual-environment/compare/v2018.02...v2019.01
 
 ## [v2018.02] Berlin summit
 
