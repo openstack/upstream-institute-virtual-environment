@@ -92,7 +92,7 @@ Getting around in the VM
 11. **IMPORTANT**: To keep your devstack environment across reboots, **do not reboot / halt the VM**,
    but instead use "Save the machine state" from VirtualBox quit dialog.
 
-Devstack installs using the [99-devstack.sh](elements/upstream-training/install.d/99-devstack.sh)
+Devstack installs using the [99-devstack](elements/upstream-training/install.d/99-devstack)
 script.
 
 Using latest devstack
