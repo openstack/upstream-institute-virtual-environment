@@ -229,7 +229,7 @@ pyperclip==1.7.0
 pypowervm==1.1.23
 pyroute2==0.5.6
 pyrsistent==0.15.4
-pysaml2==4.8.0
+pysaml2==5.0.0
 pysendfile==2.0.1
 pytest==4.6.5
 python-barbicanclient==4.9.0
