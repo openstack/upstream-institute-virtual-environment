@@ -119,7 +119,7 @@ google-auth==1.6.3
 greenlet==0.4.15
 grpcio==1.24.1
 hacking==1.1.0
-httplib2==0.14.0
+httplib2==0.18.0
 idna==2.8
 imagesize==1.1.0
 importlib-metadata==0.23
