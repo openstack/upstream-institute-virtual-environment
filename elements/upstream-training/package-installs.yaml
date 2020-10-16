@@ -9,6 +9,8 @@ isc-dhcp-client:
 mlocate:
 net-tools:
 python-pip:
+python3-pip:
+software-properties-common:
 
 # Install git workflow related software
 git:
@@ -42,6 +44,7 @@ xserver-xorg-input-evdev:
 firefox:
 geany:
 hexchat:
+xfce4-appfinder:
 xfce4-terminal:
 xfce4-whiskermenu-plugin:
 
@@ -66,8 +69,8 @@ xserver-xorg-video-qxl:
 # This list is generated from the list of package differences between a
 # pre- and post-install of devstack
 acl:
-apache2:
 apache2-dev:
+apache2:
 bc:
 bsdmainutils:
 conntrack:
@@ -88,6 +91,7 @@ gettext:
 gir1.2-libosinfo-1.0:
 graphviz:
 haproxy:
+init-system-helpers:
 ipset:
 iptables:
 iputils-arping:
@@ -95,7 +99,7 @@ iputils-ping:
 keepalived:
 kpartx:
 libapache2-mod-proxy-uwsgi:
-libapache2-mod-wsgi:
+libapache2-mod-wsgi-py3:
 libffi-dev:
 libjpeg-dev:
 libjs-jquery-tablesorter:
@@ -107,32 +111,42 @@ libpq-dev:
 libsasl2-dev:
 libssl-dev:
 libsystemd-dev:
+libunbound2:
 libvirt-clients:
 libvirt-daemon-system:
+libvirt-daemon:
 libvirt-dev:
+libvirt0:
 libxml2-dev:
 libxslt1-dev:
 libyaml-dev:
 lsof:
+lsscsi:
 lvm2:
 make:
 memcached:
+moreutils:
 mysql-server:
 netcat-openbsd:
 openssh-server:
 openssl:
+openvswitch-common:
 openvswitch-switch:
 parted:
 pkg-config:
 pm-utils:
 postgresql-server-dev-all:
 psmisc:
-python-dev:
-python-gdbm:
-python-mysqldb:
-python-psutil:
-python-virtualenv:
-python2.7:
+python3-dev:
+python3-mysqldb:
+python3-netifaces:
+python3-openvswitch:
+python3-sortedcontainers:
+python3-venv:
+python3.6-dev:
+python3.6:
+qemu-block-extra:
+qemu-system-common:
 qemu-system:
 qemu-utils:
 rabbitmq-server:
@@ -144,8 +158,12 @@ sysfsutils:
 tcpdump:
 tgt:
 thin-provisioning-tools:
+ubuntu-cloud-keyring:
 unzip:
 uuid-runtime:
+uwsgi-plugin-python3:
+uwsgi-plugin-python:
+uwsgi:
 vlan:
 wget:
 zlib1g-dev:

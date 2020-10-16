@@ -1,7 +1,8 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-institute>upstream-institute</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-training>upstream-training</a></h2>
+<h2 align=center>bit.ly/<a href=http://bit.ly/vm-2020-virtual-v1>vm-2020-virtual-v1</a></h2>
 
 Instructions
 ------------
@@ -92,7 +93,7 @@ Getting around in the VM
 11. **IMPORTANT**: To keep your devstack environment across reboots, **do not reboot / halt the VM**,
    but instead use "Save the machine state" from VirtualBox quit dialog.
 
-Devstack installs using the [99-devstack.sh](elements/upstream-training/install.d/99-devstack.sh)
+Devstack installs using the [99-devstack](elements/upstream-training/install.d/99-devstack)
 script.
 
 Using latest devstack
@@ -136,20 +137,15 @@ The image can be built using [diskimage-builder][dib] in a convenience vagrant m
     ```
     This will boot up a VirtualBox VM with CentOS 7
 
-2. Install prerequisites in the VM
-    ```bash
-    ./prereqs.sh
-    ```
-    This step needs root/sudo rights to install tools like qemu-img
-3. Activate the python virtual environment
+2. Activate the python virtual environment
     ```bash
     . .env/bin/activate
     ```
-4. Create disk image with provided convenience script
+3. Create disk image with provided convenience script
     ```bash
     ./create-training-box.sh
     ```
-5. The generated image can be found under `dist/`
+4. The generated image can be found under `dist/`
 
 [dib]: https://docs.openstack.org/diskimage-builder/latest/
 

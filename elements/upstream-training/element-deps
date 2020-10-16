@@ -2,6 +2,6 @@ ubuntu-minimal
 block-device-mbr
 vm
 growroot
-package-installs
 install-static
+package-installs
 cleanup-kernel-initrd

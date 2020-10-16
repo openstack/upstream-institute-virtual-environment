@@ -4,12 +4,17 @@ DIST=/tmp/training-vm-preinstall-diffs
 mkdir -p "$DIST"
 
 apt-mark showmanual > "$DIST"/aptmark_showmanual.orig.txt
-sudo -H pip freeze | sort > "$DIST"/pipfreeze.orig.txt
+sudo -H pip3 freeze | sort > "$DIST"/pipfreeze.orig.txt
 
 /opt/devstack/stack.sh
 
-apt-mark showmanual | sort > "$DIST"/aptmark_showmanual.after.txt
-sudo -H pip freeze > "$DIST"/pipfreeze.after.txt
+(
+  apt-mark showmanual
+  find /var/cache/apt/archives/ -iname '*.deb' -exec basename '{}' \; \
+    | awk -F'_' '/deb/{ print $1 }'
+) | sort | uniq > "$DIST"/aptmark_showmanual.after.txt
+
+sudo -H pip3 freeze | sort > "$DIST"/pipfreeze.after.txt
 
 # Generate packages.yaml
 comm -13 "$DIST"/aptmark_showmanual.{orig,after}.txt | sed 's/$/:/' > "$DIST"/packages.yaml

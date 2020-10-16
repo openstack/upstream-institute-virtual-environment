@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
-# Empty user caches
 set -x
-rm -rf /root/.cache
-rm -rf /home/ubuntu/.cache
 
 # Remove compiled pyc files
 updatedb

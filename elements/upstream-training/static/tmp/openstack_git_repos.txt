@@ -1,9 +1,10 @@
-https://opendev.org/openstack/nova.git
+https://github.com/novnc/noVNC.git
+https://opendev.org/openstack/cinder.git
+https://opendev.org/openstack/glance.git
 https://opendev.org/openstack/horizon.git
 https://opendev.org/openstack/keystone.git
-https://opendev.org/openstack/cinder.git
-https://github.com/novnc/noVNC.git
 https://opendev.org/openstack/neutron.git
+https://opendev.org/openstack/nova.git
+https://opendev.org/openstack/placement.git
 https://opendev.org/openstack/requirements.git
 https://opendev.org/openstack/tempest.git
-https://opendev.org/openstack/glance.git

@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## [v2020.02] Virtual summit
+
+### Changed
+- Updated pip and apt packages
+
 ## [v2019.02] Shanghai summit
 
 ### Changed

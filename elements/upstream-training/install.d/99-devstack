@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# # Install devstack
+add-apt-repository -y cloud-archive:train
+apt dist-upgrade -y
+
+# Install devstack
 git clone --depth=1 https://opendev.org/openstack/devstack \
                     /opt/devstack
 mv /tmp/local.conf /opt/devstack/
-
-pip install setuptools
-pip install -r /tmp/requirements.txt
 
 mkdir /opt/stack
 
@@ -14,10 +14,25 @@ pushd /opt/stack
 for repo in $(cat /tmp/openstack_git_repos.txt); do
     git clone --depth 1 $repo
 done
+
+# Cache all the PIP packages
+pip3 install setuptools wheel --upgrade
+
+for repo in *; do
+  (
+    cd "$repo" || return
+    cat *constraints*.txt > /tmp/constraints-$repo.txt
+    cat global-requirements.txt requirements.txt > /tmp/requirements-$repo.txt
+    pip3 install -r --upgrade /tmp/requirements-$repo.txt -c /tmp/constraints-$repo.txt
+    rm -rf /tmp/{constraints,requirements}-$repo.txt
+  )
+done
+pip3 install -r --upgrade /tmp/requirements.txt
+rm -rf /root/.cache/pip
 popd
 
 pushd /opt/devstack/files/
-wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+wget http://download.cirros-cloud.net/0.5.1/cirros-0.5.1-x86_64-disk.img
 popd
 
 # su ubuntu -c '/opt/devstack/stack.sh'

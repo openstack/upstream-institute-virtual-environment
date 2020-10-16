@@ -12,6 +12,8 @@ export ELEMENTS_PATH=./elements/
 
 mkdir -p tmp
 
+export DIB_APT_SOURCES_CONF="cloudarchive-train:deb http://ubuntu-cloud.archive.canonical.com/ubuntu bionic-updates/train main"
+
 DIB_OPTIONS="-o tmp/$DISK -t $FORMAT --image-size 40"
 if [ "$FORMAT" = "vmdk" ]; then
     DIB_OPTIONS="$DIB_OPTIONS --qemu-img-options subformat=streamOptimized"
