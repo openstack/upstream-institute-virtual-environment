@@ -1,7 +1,6 @@
 OpenStack Upstream Institute Virtual Environment
 ================================================
 
-<h2 align=center>bit.ly/<a href=http://bit.ly/upstream-training>upstream-training</a></h2>
 <h2 align=center>bit.ly/<a href=http://bit.ly/vm-2020-virtual-v1>vm-2020-virtual-v1</a></h2>
 
 Instructions
@@ -24,7 +23,7 @@ Instructions
 4. Start up the VM
 
 [Extension Pack]: http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#extpack
-[image]: http://bit.ly/vm-2019-shanghai-v1
+[image]: http://bit.ly/vm-2020-virtual-v1
 [ova-import-help]: README-virtualbox-import.md
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 [VMware player]: http://www.vmware.com/products/player/playerpro-evaluation.html
