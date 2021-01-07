@@ -79,7 +79,7 @@ keystoneauth1==4.2.1
 keystonemiddleware==9.1.0
 kombu==5.0.1
 libvirt-python==6.6.0
-lxml==4.5.2
+lxml==4.6.2
 microversion-parse==1.0.1
 monotonic==1.5
 msgpack==1.0.0
