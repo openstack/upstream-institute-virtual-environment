@@ -144,7 +144,7 @@ pyperclip==1.8.0
 pypowervm==1.1.24
 pyroute2==0.5.14
 pyrsistent==0.16.0
-pysaml2==6.1.0
+pysaml2==6.5.0
 python-barbicanclient==5.0.1
 python-cinderclient==7.2.0
 python-dateutil==2.8.1
