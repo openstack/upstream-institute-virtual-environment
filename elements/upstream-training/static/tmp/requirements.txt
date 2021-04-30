@@ -164,7 +164,7 @@ requestsexceptions==1.4.0
 retrying==1.3.3
 rfc3986==1.4.0
 rjsmin==1.1.0
-rsa==4.6
+rsa==4.7
 rtslib-fb==2.1.74
 scrypt==0.8.15
 semantic-version==2.8.5
