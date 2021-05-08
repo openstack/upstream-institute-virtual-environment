@@ -56,7 +56,7 @@ django-debreach==2.0.1
 dogpile.cache==1.0.2
 etcd3==0.12.0
 etcd3gw==0.2.5
-eventlet==0.26.1
+eventlet==0.31.0
 filelock==3.0.12
 futurist==2.3.0
 glance-store==2.3.0
