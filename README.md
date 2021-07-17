@@ -53,7 +53,7 @@ Getting around in the VM
     * **Geany** text editor
     * **HexChat** IRC client
         > please make sure that you replace the default user `ubuntu` upon first
-        > start before logging in to Freenode channels.
+        > start before logging in to OFTC channels.
     * **DevStack** is run from /opt/devstack
     * **OpenStack** source code is placed to /opt/stack
 
