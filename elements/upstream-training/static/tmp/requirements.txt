@@ -3,7 +3,7 @@ Django==2.2.15
 Flask-RESTful==0.3.8
 Flask==1.1.2
 Jinja2==2.11.2
-Mako==1.1.3
+Mako==1.2.2
 Paste==3.4.3
 PasteDeploy==2.1.0
 PyJWT==1.7.1
