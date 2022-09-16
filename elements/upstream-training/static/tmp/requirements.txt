@@ -118,7 +118,7 @@ oslo.rootwrap==6.2.0
 oslo.serialization==4.0.1
 oslo.service==2.4.0
 oslo.upgradecheck==1.1.1
-oslo.utils==4.6.0
+oslo.utils==4.10.1
 oslo.versionedobjects==2.3.0
 oslo.vmware==3.7.0
 osprofiler==3.4.0
