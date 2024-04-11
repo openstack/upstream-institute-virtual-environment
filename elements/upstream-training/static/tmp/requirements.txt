@@ -68,7 +68,7 @@ googleapis-common-protos==1.52.0
 greenlet==0.4.16
 grpcio==1.31.0
 httplib2==0.18.1
-idna==2.10
+idna==3.7
 importlib-metadata==1.7.0
 importlib-resources==3.0.0
 iso8601==0.1.12
