@@ -155,7 +155,7 @@ python-keystoneclient==4.1.1
 python-memcached==1.59
 python-neutronclient==7.2.1
 python-novaclient==17.2.1
-python-openstackclient==5.4.0
+python-openstackclient==6.3.0
 python-swiftclient==3.10.1
 pytz==2020.1
 pyudev==0.22.0
